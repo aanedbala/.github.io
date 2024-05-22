@@ -1,0 +1,50 @@
+.studies {
+    padding: 70px 60px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+
+    @include desktop {
+        padding: 40px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        .button {
+            @include mobile {
+                padding-inline: 20px;
+                font-size: 15px;
+            }
+
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            border-radius: var(--border-radius-large);
+        }
+
+        .active {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+        }
+    }
+    
+    &__item {
+        display: none;
+    }
+
+    .active {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 15px;
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--color-accent);
+    }
+}
